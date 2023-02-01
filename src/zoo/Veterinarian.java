@@ -4,6 +4,8 @@ package zoo;
 //2) Помещает в карантин, изолируя от других животных
 //3) возвращает животное в обычный вольер
 
+import java.util.Objects;
+
 public class Veterinarian extends Human {
 
     @Override
@@ -27,12 +29,12 @@ public class Veterinarian extends Human {
 
     public void checkHealth(Animal animal) {
         if (!animal.healthy) {
-            animal.cage = "";
-            System.out.println("");
+            animal.cage = "карантин";
+            System.out.println(animal.name + " помещен(а) в карантин");
         }
-        if (animal.cage == "" && animal.healthy) {
-            animal.cage = "";
-            System.out.println("");
+        if (Objects.equals(animal.cage, "карантин") && animal.healthy) {
+            animal.cage = "в вольере";
+            System.out.println(animal.name + " выздоровел(а)");
         }
     }
 

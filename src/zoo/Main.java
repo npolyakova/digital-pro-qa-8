@@ -6,27 +6,27 @@ public class Main {
         Veterinarian veterinarian = new Veterinarian();
         Zookeeper zookeeper = new Zookeeper();
 
-//        veterinarian.lunch();
-//        zookeeper.lunch();
-//
-//        veterinarian.hungry = true;
-//        veterinarian.lunch();
-//
-//        zookeeper.hurt = true;
-//        zookeeper.makeBandage();
+        Cats lion = new Cats("Кузя");
+        Cats tiger = new Cats("Жора");
+        Hypo hypo = new Hypo("Дося");
+        Squirrels squirrelS = new Squirrels("Стрелка");
+        Squirrels squirrelL = new Squirrels("Ловкач");
 
-        Cats lion = new Cats();
-        Cats tiger = new Cats();
-        Hypo hypo = new Hypo();
-        Squirrels squirrelS = new Squirrels();
-        Squirrels squirrelL = new Squirrels();
+        veterinarian.lunch();
+        zookeeper.lunch();
 
-//        System.out.println(zookeeper.hurt);
-//        lion.bite(zookeeper);
-//        System.out.println(zookeeper.hurt);
+        veterinarian.checkHealth(tiger);
+        veterinarian.checkHealth(squirrelS);
+
+        veterinarian.hungry = true;
+        veterinarian.lunch();
+
+        lion.bite(zookeeper);
+        zookeeper.makeBandage();
+
+        zookeeper.changeWater(hypo);
 
         squirrelL.goOut();
         veterinarian.watch(squirrelL);
-
     }
 }

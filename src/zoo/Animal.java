@@ -13,4 +13,8 @@ public class Animal {
         human.hurt = true;
         System.out.println("Животное покусало " + human.profession);
     }
+
+    public Animal(String name) {
+        this.name = name;
+    }
 }

@@ -1,5 +1,7 @@
 package zoo;
 
+import java.util.Objects;
+
 public abstract class Human {
 
     //Может быть голодным и покусанным
@@ -17,11 +19,11 @@ public abstract class Human {
     abstract void lunch();
 
     void watch(Squirrels squirrel) {
-        if (squirrel.cage == "вне вольера") {
-            System.out.println("Белка поймана");
+        if (Objects.equals(squirrel.cage, "вне вольера")) {
+            System.out.println(this.profession + " поймал белку");
             squirrel.cage = "в вольере";
         } else {
-            System.out.println("Белка на месте");
+            System.out.println(this.profession + " убедился, что белка Стрелка на месте");
         }
     }
 

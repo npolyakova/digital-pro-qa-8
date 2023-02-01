@@ -25,6 +25,15 @@ public class Zookeeper extends Human {
         }
     }
 
+    void changeWater(Hypo hypo) {
+        if (hypo.needFreshWater) {
+            System.out.println("Смотритель поменял бегемоту воду");
+            hypo.needFreshWater = false;
+        } else {
+            System.out.println("Бегемоту пока не нужно менять воду");
+        }
+    }
+
     public Zookeeper() {
         profession = "Смотритель";
     }
